@@ -1,0 +1,22 @@
+.show.bio {
+    flex-direction: row;
+}
+
+.show.bio div {
+    width: 70%;
+}
+
+.show .headshot {
+    border-radius: 100%;
+    height: 200px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid var(--accent-color);
+}
+
+@media screen and (max-width: 1000px) {
+    .show.bio div {
+        width: 100%;
+    }
+}

@@ -35,3 +35,15 @@
 .resume-box .show .title {
     border-bottom: 0px;
 }
+
+.email a {
+    /* These are technically the same, but use both */
+    overflow-wrap: anywhere;
+    word-wrap: anywhere;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.resume-box .show .director {
+    width: fit-content;
+}

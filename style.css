@@ -253,7 +253,8 @@ p.link,
 p.link a:visited,
 .caption .link,
 p a,
-p a:visited {
+p a:visited,
+.email a {
     color: var(--page-link-color);
 }
 
@@ -270,8 +271,18 @@ p.link {
 .show h3 {
     scroll-margin-top: calc(var(--nav-height) + 5px);
     scroll-snap-margin-top: calc(var(--nav-height) + 5px);
-    /* iOS 11 and older */
     align-content: center;
+    /* iOS 11 and older */
+}
+
+header ul li span {
+    display: inline-block;
+    font-size: small;
+    height: 0;
+    color: var(--link-hover-background-color);
+    font-weight: bold;
+    text-transform: lowercase;
+    margin-right: var(--nav-margin);
 }
 
 @media screen and (max-width: 470px) {
@@ -287,11 +298,27 @@ p.link {
 }
 
 @media screen and (max-width: 600px) {
+    header {
+        height: calc(var(--nav-height) + 15px);
+    }
     header nav {
         flex-direction: column;
     }
+    header nav ul li a {
+        margin-top: 0px;
+        margin-bottom: 0;
+        width: max-content;
+    }
     header nav ul li span {
-        display: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    }
+    header nav ul li {
+        flex-direction: column;
+        display: flex;
+        text-align: center;
+        width: min-content;
     }
     .hole {
         display: none;
@@ -306,20 +333,11 @@ p.link {
 }
 
 @media screen and (min-width: 600px) {
-    header ul li a.sub-domain {
-        margin-right: 0px;
-    }
-    header ul li span {
-        display: inline-block;
-        font-size: small;
-        height: 0;
-        color: var(--link-hover-background-color);
-        font-weight: bold;
-        text-transform: lowercase;
-        margin-right: var(--nav-margin);
-    }
     header ul li span::before {
         content: ": ";
+    }
+    header ul li a.sub-domain {
+        margin-right: 0px;
     }
 }
 
@@ -342,7 +360,7 @@ p.link {
     header nav ul {
         margin-right: 0;
     }
-    header nav ul li a {
+    nav ul li a {
         margin: calc(var(--nav-margin)/2);
     }
     header nav ul li span {
@@ -368,5 +386,4 @@ p.link {
         flex-wrap: wrap;
     }
      */
-
 }

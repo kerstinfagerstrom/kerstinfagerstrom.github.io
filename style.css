@@ -271,6 +271,7 @@ p.link {
     scroll-margin-top: calc(var(--nav-height) + 5px);
     scroll-snap-margin-top: calc(var(--nav-height) + 5px);
     /* iOS 11 and older */
+    align-content: center;
 }
 
 @media screen and (max-width: 470px) {
@@ -367,4 +368,5 @@ p.link {
         flex-wrap: wrap;
     }
      */
+
 }

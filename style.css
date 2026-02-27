@@ -386,4 +386,15 @@ header ul li span {
         flex-wrap: wrap;
     }
      */
+
+}
+
+@media screen and (max-width: 350px) {
+    section {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .show {
+        border: 0;
+    }
 }

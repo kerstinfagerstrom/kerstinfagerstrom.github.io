@@ -389,7 +389,7 @@ header ul li span {
 
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (width: 350px) {
     section {
         margin-left: 0;
         margin-right: 0;
@@ -398,3 +398,4 @@ header ul li span {
         border: 0;
     }
 }
+

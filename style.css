@@ -419,7 +419,7 @@ header ul li span {
         border: 0;
     }
     .show .fig img {
-        max-width: 200px;
-        height: fit-content;
+        width: 200px;
     }
+
 }

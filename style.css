@@ -53,6 +53,10 @@ em {
     font-style: italic;
 }
 
+strong {
+    font-weight: bold;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -214,8 +218,8 @@ p.caption::before {
     padding: 10px;
 }
 
-.show .fig img,
-.show .fig video {
+.fig img,
+.fig video {
     height: 300px;
     flex-direction: vertical;
 }
@@ -285,6 +289,12 @@ header ul li span {
     margin-right: var(--nav-margin);
 }
 
+.images .line {
+    width: 100%;
+    border: 1px var(--page-link-color) solid;
+    margin: 1rem;
+}
+
 @media screen and (max-width: 470px) {
     header h1 {
         justify-content: center;
@@ -299,10 +309,18 @@ header ul li span {
 
 @media screen and (max-width: 600px) {
     header {
-        height: calc(var(--nav-height) + 15px);
+        position: relative;
+        height: calc(var(--nav-height) - 30px);
+    }
+    header.sub-domain {
+        height: calc(var(--nav-height) - 7px);
+    }
+    header h1 {
+        display: none;
     }
     header nav {
         flex-direction: column;
+        margin-top: 7px;
     }
     header nav ul li a {
         margin-top: 0px;
@@ -330,6 +348,10 @@ header ul li span {
         margin: 0 1rem 1rem 1rem;
         padding: 0;
     }
+    .show .fig img {
+        max-width: 300px;
+        height: fit-content;
+    }
 }
 
 @media screen and (min-width: 600px) {
@@ -342,8 +364,8 @@ header ul li span {
 }
 
 @media screen and (max-width: 1000px) {
-    .show .fig img,
-    .show .fig video {
+    .fig img,
+    .fig video {
         height: 200px;
         flex-direction: vertical;
     }
@@ -386,8 +408,8 @@ header ul li span {
         flex-wrap: wrap;
     }
      */
-
 }
+
 @media screen and (max-width: 350px) {
     section {
         margin-left: 0;
@@ -401,5 +423,3 @@ header ul li span {
         height: fit-content;
     }
 }
-
-

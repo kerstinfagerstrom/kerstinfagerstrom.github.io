@@ -347,7 +347,7 @@ header ul li span {
     }
     .show .fig img {
         max-width: 300px;
-        height: fit-content;
+        height: auto;
     }
 }
 
@@ -417,6 +417,6 @@ header ul li span {
     }
     .show .fig img {
         width: 200px;
-        height: fit-content;
+        height: auto;
     }
 }
